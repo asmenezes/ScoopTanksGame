@@ -3,7 +3,8 @@ package entities;
 import flixel.FlxSprite;
 import flixel.FlxG;
 import flixel.FlxObject;
-
+import flixel.math.FlxPoint;
+import flixel.math.FlxVelocity;
 class Player2 extends FlxSprite
 {
 var SPEED:Int = 175;
@@ -90,9 +91,12 @@ var right:Bool = false;
           //animation.play("idle");
         }
       }
+      public function ai(thePoint:FlxPoint){
+        FlxVelocity.moveTowardsPoint(this, thePoint, SPEED);
+      }
     override public function update(elapsed:Float):Void{
       //call the movement function to move
-      move(elapsed);
+      //move(elapsed);
         super.update(elapsed);
 
 

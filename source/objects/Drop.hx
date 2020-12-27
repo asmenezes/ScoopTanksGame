@@ -12,7 +12,7 @@ class Drop extends FlxSprite
     {
         super(x,y);
         loadGraphic("assets/images/explosionSmoke5.png");
-
+        immovable = true;
     }
 
     override public function update(elapsed:Float):Void

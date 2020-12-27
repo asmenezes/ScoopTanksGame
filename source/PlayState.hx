@@ -4,7 +4,7 @@ import flixel.FlxState;
 import flixel.FlxG;
 import flixel.tile.FlxTilemap;
 import entities.Player;
-//import objects.Square;
+import objects.Drop;
 import objects.Barrel;
 //import objects.Door;
 import entities.Player2;
@@ -19,11 +19,15 @@ class PlayState extends FlxState
   var barrels:FlxTypedGroup<Barrel>;
   var itemMap:FlxTilemap;
   var player2:Player2;
-
+  var dropOff:Drop;
+  var camFollow:FlxObject;
 //  var door:Door;
     override public function create():Void
     {
-
+      camFollow = new FlxObject(0,0);
+      //Create the Dropoff
+      dropOff = new Drop(50,50);
+      dropOff.screenCenter();
       //Create the Map
         map = new FlxTilemap();
         //Block Map
@@ -56,22 +60,32 @@ for(i in 1...5){
         //Create the Player
     player = new Player(90,70);
     player.screenCenter();
+    player2.screenCenter();
+    player2.y += 500;
     //add player to the level
     add(map);
     add(blockMap);
     add(barrels);
+    add(dropOff);
       add(player);
       add(player2);
+      add(camFollow);
       // bullets = new FlxTypedGroup<Square>(50);
       // add(bullets);
       //make the camera follow the player
-      FlxG.camera.follow(player,TOPDOWN,1);
+      FlxG.camera.follow(camFollow,TOPDOWN,1);
 
         super.create();
     }
-    // function hitBullet(map:FlxTilemap,bullet:Square):Void{
-    //   bullets.remove(bullet,true);
-    // }
+    function hitDrop(drop:Drop,barrel:Barrel):Void{
+      barrels.remove(barrel,true);
+      checkWin();
+    }
+    function checkWin():Void{
+      if(barrels.length <= 0 && player.barrelStack.length <= 0){
+        FlxG.switchState(new MenuState());
+      }
+    }
     // function hitEnemy(enemy:Enemy,bullet:Square):Void{
     //   bullets.remove(bullet,true);
     //   enemy.hitByBullet = true;
@@ -80,7 +94,7 @@ for(i in 1...5){
       if(FlxG.keys.justPressed.SPACE&&player.barrelStack.length > 0){
       var bColor:Int = player.barrelStack.pop();
       var newBarrel = new Barrel(player.x,player.y,bColor);
-      newBarrel.velocity.set(Math.max(200.0,(Math.abs(player.velocity.x)+Math.abs(player.velocity.y)*1.5)),0);
+      newBarrel.velocity.set(Math.max(300.0,(Math.abs(player.velocity.x)+Math.abs(player.velocity.y)*1.5)),0);
       newBarrel.velocity.rotate(FlxPoint.weak(0, 0), player.angle + 90);
 
       barrels.add(newBarrel);
@@ -109,17 +123,23 @@ for(i in 1...5){
     // }
     override public function update(elapsed:Float):Void
     {
-
+      camFollow.x = (player.x+player2.x)/2;
+      camFollow.y = (player.y+player2.y)/2;
+      player2.ai(player.getMidpoint());
     //FlxG.collide(map,player);
     FlxG.collide(blockMap,barrels);
     FlxG.collide(player,barrels,collectBarrel);
-    //FlxG.collide(map,bullets,hitBullet);
+    FlxG.collide(dropOff,barrels,hitDrop);
     //FlxG.collide(enem,bullets,hitEnemy);
     //FlxG.collide(map,enem);
     FlxG.collide(player,blockMap);
     FlxG.collide(player2,blockMap);
+  if(FlxG.collide(player2,player)){
+    FlxG.switchState(new MenuState());
+  };
     //FlxG.collide(map,door);
-  shoot();
+    shoot();
+
         super.update(elapsed);
 
 
