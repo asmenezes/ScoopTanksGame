@@ -5,6 +5,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.math.FlxPoint;
 import flixel.math.FlxVelocity;
+import flixel.math.FlxAngle;
 class Player2 extends FlxSprite
 {
 var SPEED:Int = 175;
@@ -92,6 +93,7 @@ var right:Bool = false;
         }
       }
       public function ai(thePoint:FlxPoint){
+        angle=FlxAngle.angleBetweenPoint(this,thePoint,true) + 270;
         FlxVelocity.moveTowardsPoint(this, thePoint, SPEED);
       }
     override public function update(elapsed:Float):Void{

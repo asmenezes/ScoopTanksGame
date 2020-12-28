@@ -73,7 +73,7 @@ for(i in 1...5){
       // bullets = new FlxTypedGroup<Square>(50);
       // add(bullets);
       //make the camera follow the player
-      FlxG.camera.follow(camFollow,TOPDOWN,1);
+      FlxG.camera.follow(player,TOPDOWN,1);
 
         super.create();
     }

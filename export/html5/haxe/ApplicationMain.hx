@@ -15,11 +15,11 @@ class ApplicationMain
 	#if !macro
 	public static function main()
 	{
-		lime.system.System.__registerEntryPoint("ShootyPlat", create);
+		lime.system.System.__registerEntryPoint("ScoopTanks", create);
 
 		#if (js && html5)
 		#if (munit || utest)
-		lime.system.System.embed("ShootyPlat", null, 640, 480);
+		lime.system.System.embed("ScoopTanks", null, 640, 480);
 		#end
 		#else
 		create(null);
@@ -32,10 +32,10 @@ class ApplicationMain
 
 		ManifestResources.init(config);
 
-		app.meta["build"] = "83";
-		app.meta["company"] = "HaxeFlixel";
-		app.meta["file"] = "ShootyPlat";
-		app.meta["name"] = "ShootyPlat";
+		app.meta["build"] = "2";
+		app.meta["company"] = "Andrew Menezes";
+		app.meta["file"] = "ScoopTanks";
+		app.meta["name"] = "ScoopTanks";
 		app.meta["packageName"] = "com.example.myapp";
 		app.meta["version"] = "0.0.1";
 
@@ -57,7 +57,7 @@ class ApplicationMain
 			minimized: false,
 			parameters: {},
 			resizable: false,
-			title: "ShootyPlat",
+			title: "ScoopTanks",
 			width: 640,
 			x: null,
 			y: null,
