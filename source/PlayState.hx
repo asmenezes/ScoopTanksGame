@@ -83,7 +83,7 @@ for(i in 1...5){
     }
     function checkWin():Void{
       if(barrels.length <= 0 && player.barrelStack.length <= 0){
-        FlxG.switchState(new MenuState());
+        FlxG.switchState(new WinState());
       }
     }
     // function hitEnemy(enemy:Enemy,bullet:Square):Void{
@@ -135,7 +135,7 @@ for(i in 1...5){
     FlxG.collide(player,blockMap);
     FlxG.collide(player2,blockMap);
   if(FlxG.collide(player2,player)){
-    FlxG.switchState(new MenuState());
+    FlxG.switchState(new LoseState());
   };
     //FlxG.collide(map,door);
     shoot();
