@@ -32,10 +32,10 @@ var right:Bool = false;
       //movement function
       function move(elapsed:Float){
         //get the buttons pressed
-        up = FlxG.keys.anyPressed([W]);
-        down = FlxG.keys.anyPressed([S]);
-        left = FlxG.keys.anyPressed([A]);
-        right = FlxG.keys.anyPressed([D]);
+        up = FlxG.keys.anyPressed([UP,W]);
+        down = FlxG.keys.anyPressed([DOWN,S]);
+        left = FlxG.keys.anyPressed([LEFT,A]);
+        right = FlxG.keys.anyPressed([RIGHT,D]);
         //cancel out any conflicting button presses
         if (up && down){
           up = down = false;
