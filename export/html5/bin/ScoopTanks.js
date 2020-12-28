@@ -893,7 +893,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "2";
+	app.meta.h["build"] = "4";
 	app.meta.h["company"] = "Andrew Menezes";
 	app.meta.h["file"] = "ScoopTanks";
 	app.meta.h["name"] = "ScoopTanks";
@@ -9033,6 +9033,7 @@ entities_Player2.prototype = $extend(flixel_FlxSprite.prototype,{
 		}
 	}
 	,ai: function(thePoint) {
+		this.set_angle(flixel_math_FlxAngle.angleBetweenPoint(this,thePoint,true) + 270);
 		flixel_math_FlxVelocity.moveTowardsPoint(this,thePoint,this.SPEED);
 	}
 	,update: function(elapsed) {
@@ -70944,7 +70945,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 618131;
+	this.version = 197088;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
