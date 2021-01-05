@@ -32,7 +32,7 @@ class ApplicationMain
 
 		ManifestResources.init(config);
 
-		app.meta["build"] = "6";
+		app.meta["build"] = "7";
 		app.meta["company"] = "Andrew Menezes";
 		app.meta["file"] = "ScoopTanks";
 		app.meta["name"] = "ScoopTanks";
@@ -56,7 +56,7 @@ class ApplicationMain
 			maximized: false,
 			minimized: false,
 			parameters: {},
-			resizable: false,
+			resizable: true,
 			title: "ScoopTanks",
 			width: 640,
 			x: null,
