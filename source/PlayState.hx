@@ -24,6 +24,10 @@ class PlayState extends FlxState
 //  var door:Door;
     override public function create():Void
     {
+      if (FlxG.sound.music.playing == false) // don't restart the music if it's already playing
+{
+    FlxG.sound.playMusic("assets/music/Farty-McSty.ogg", 1, true);
+}
       camFollow = new FlxObject(0,0);
       //Create the Dropoff
       dropOff = new Drop(50,50);

@@ -93,11 +93,19 @@ null
 #if !display
 #if flash
 
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_farty_mcsty_ogg extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_analog_nostalgia_mp3 extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_analog_nostalgia_ogg extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_music_farty_mcsty_mp3 extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_sounds_select extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_sounds_pickup extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_sounds_shoot extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_tileset_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_map_barrels_csv extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_map_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_statemachine_svg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_map_tmx extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_map_csv extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_data_map_blocks_csv extends null { }

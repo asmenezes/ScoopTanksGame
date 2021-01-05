@@ -3,9 +3,15 @@ package;
 import flixel.FlxState;
 import flixel.FlxG;
 import flixel.ui.FlxButton;
+
 class MenuState extends FlxState{
    var playButton:FlxButton;
     override public function create():Void{
+      trace(FlxG.sound.music);
+      if (FlxG.sound.music == null) // don't restart the music if it's already playing
+{
+    FlxG.sound.playMusic("assets/music/Analog-Nostalgia.ogg", 1, true);
+}
       playButton = new FlxButton(0, 0, "Play", clickPlay);
       playButton.screenCenter();
       add(playButton);
@@ -16,6 +22,8 @@ class MenuState extends FlxState{
         super.update(elapsed);
     }
     function clickPlay(){
+      FlxG.sound.pause();
+
     FlxG.switchState(new PlayState());
 }
 }

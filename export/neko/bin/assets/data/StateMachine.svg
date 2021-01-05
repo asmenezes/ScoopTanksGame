@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)"
+   sodipodi:docname="StateMachine.svg">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#155724;stroke-opacity:1;fill:#155724;fill-opacity:1"
+         id="path878" />
+    </marker>
+    <rect
+       x="43.192662"
+       y="139.9082"
+       width="18.203911"
+       height="16.450679"
+       id="rect16" />
+    <rect
+       x="43.192662"
+       y="139.9082"
+       width="76.302432"
+       height="57.663453"
+       id="rect28" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="310.59028"
+     inkscape:cy="588.25563"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="836"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#4ab563;stroke:#000000;stroke-width:0.2794;stroke-linecap:round;stroke-opacity:0"
+       id="path12"
+       cx="51.015041"
+       cy="145.9574"
+       r="16.001665" />
+    <text
+       xml:space="preserve"
+       id="text14"
+       style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect16);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="translate(-0.27726482,-2.0316163)"><tspan
+         x="43.193359"
+         y="143.34159"><tspan
+           style="font-size:3.88056px">Move </tspan></tspan><tspan
+         x="43.193359"
+         y="148.19228"><tspan
+           style="font-size:3.88056px">Towards
+</tspan></tspan><tspan
+         x="43.193359"
+         y="153.04297"><tspan
+           style="font-size:3.88056px">Player</tspan></tspan></text>
+    <path
+       style="fill:#155724;stroke:#155724;stroke-width:0.259566;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 66.195684,149.5141 39.371636,0.0143"
+       id="path20" />
+    <circle
+       style="fill:#4ab563;stroke:#000000;stroke-width:0.2794;stroke-linecap:round;stroke-opacity:0"
+       id="circle22"
+       cx="121.30222"
+       cy="145.9574"
+       r="16.001665" />
+    <text
+       xml:space="preserve"
+       id="text26"
+       style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect28);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="translate(70.574492,-2.0316163)"><tspan
+         x="43.193359"
+         y="143.34159"><tspan
+           style="font-size:3.88056px">Rotate to be parralell with Whatever </tspan></tspan><tspan
+         x="43.193359"
+         y="148.19228"><tspan
+           style="font-size:3.88056px">its colliding with, pick the direction </tspan></tspan><tspan
+         x="43.193359"
+         y="153.04297"><tspan
+           style="font-size:3.88056px">thats closer to the player</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="71.410469"
+       y="146.49539"
+       id="text32"><tspan
+         sodipodi:role="line"
+         id="tspan30"
+         x="71.410469"
+         y="146.49539"
+         style="font-size:3.88056px;stroke-width:0.264583">If Colliding</tspan></text>
+  </g>
+</svg>
