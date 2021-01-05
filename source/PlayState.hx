@@ -87,6 +87,7 @@ for(i in 1...5){
     }
     function checkWin():Void{
       if(barrels.length <= 0 && player.barrelStack.length <= 0){
+        FlxG.sound.pause();
         FlxG.switchState(new WinState());
       }
     }
@@ -139,6 +140,7 @@ for(i in 1...5){
     FlxG.collide(player,blockMap);
     FlxG.collide(player2,blockMap);
   if(FlxG.collide(player2,player)){
+    FlxG.sound.pause();
     FlxG.switchState(new LoseState());
   };
     //FlxG.collide(map,door);

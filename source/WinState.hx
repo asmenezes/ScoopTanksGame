@@ -8,6 +8,10 @@ import flixel.util.FlxColor;
 class WinState extends FlxState{
    var playButton:FlxButton;
     override public function create():Void{
+      if (FlxG.sound.music == null || FlxG.sound.music.playing == false)
+{
+    FlxG.sound.playMusic("assets/music/Analog-Nostalgia.ogg", 1, true);
+}
       var disp = new FlxText();
       disp.text = "You Win!";
       disp.color = FlxColor.GREEN;
@@ -26,6 +30,7 @@ class WinState extends FlxState{
         super.update(elapsed);
     }
     function clickPlay(){
+      FlxG.sound.pause();
     FlxG.switchState(new PlayState());
 }
 }

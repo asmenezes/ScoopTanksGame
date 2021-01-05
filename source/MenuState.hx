@@ -8,7 +8,7 @@ class MenuState extends FlxState{
    var playButton:FlxButton;
     override public function create():Void{
       trace(FlxG.sound.music);
-      if (FlxG.sound.music == null) // don't restart the music if it's already playing
+      if (FlxG.sound.music == null || FlxG.sound.music.playing == false) 
 {
     FlxG.sound.playMusic("assets/music/Analog-Nostalgia.ogg", 1, true);
 }
